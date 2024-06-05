@@ -2,10 +2,10 @@ import db from "../models/index";
 
 let getHomepage = async (req, res) => {
   try {
-    let data = await db.User.findAll();
+    let data = await db.User.findAll(); //Use duoc lay ra tu trong user.js
     console.log(data);
     return res.render("homePage.ejs", {
-      data: JSON.stringify(data),
+      data: JSON.stringify(data), //data duoc khoi tao ra de truyen du lieu qua homePage.ejs
     });
   } catch (error) {
     console.log(error);
